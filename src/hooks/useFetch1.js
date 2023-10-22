@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const useFetch = (url) => {
+const useFetch1 = (url) => {
   
     let [data, setData] = useState([]);
     let [loading, setLoading] = useState(false);
@@ -21,7 +21,7 @@ const useFetch = (url) => {
             return res.json()
         })
         .then(data => {
-            setData(data.artists);
+            setData(data.album);
             setLoading(false)
         })
         .catch(e =>{
@@ -38,4 +38,4 @@ const useFetch = (url) => {
     return {data, loading, error}
 }
 
-export default useFetch
+export default useFetch1
