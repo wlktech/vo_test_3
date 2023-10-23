@@ -19,7 +19,7 @@ export default function Artist() {
       <div className='container my-3'>
         <div className="">
         {artists && artists.map(artist => (
-          <div className="" key={artist.id}>
+          <div className="" key={artist.idArtist}>
             <div className="text-center">
             <img src={artist.strArtistLogo} className='w-25' alt="" />
             </div>

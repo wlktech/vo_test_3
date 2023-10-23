@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const useApi = (url) => {
+const useFetch2 = (url) => {
   
     let [data, setData] = useState([]);
     let [loading, setLoading] = useState(false);
@@ -21,7 +21,8 @@ const useApi = (url) => {
             return res.json()
         })
         .then(data => {
-            setData(data.blog);
+            setData(data.track);
+            // console.log(setData(data.track));
             setLoading(false)
         })
         .catch(e =>{
@@ -38,4 +39,4 @@ const useApi = (url) => {
     return {data, loading, error}
 }
 
-export default useApi
+export default useFetch2

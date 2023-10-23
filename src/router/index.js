@@ -1,13 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from '../App';
-import Contact from '../pages/Contact';
-import CountryDetail from "../pages/CountryDetail";
 import NotFound from "../pages/NotFound";
-import Api from "../pages/Api";
-import ApiBlogDetail from "../pages/ApiBlogDetail";
 import Artist from "../pages/Artist";
 import Album from "../pages/Album";
 import AlbumDetail from "../pages/AlbumDetail";
+import Track from "../pages/Track";
+import Mtv from "../pages/Mtv";
 
 const router = createBrowserRouter([
     {
@@ -24,23 +22,15 @@ const router = createBrowserRouter([
             },
             {
                 path : '/tracks',
-                element : <Contact/>
+                element : <Track/>
             },
             {
                 path : '/mtv',
-                element : <Api/>
-            },
-            {
-                path : '/country/:id',
-                element : <CountryDetail/>
+                element : <Mtv/>
             },            
             {
                 path : 'albums/album/:id',
                 element : <AlbumDetail/>
-            },
-            {
-                path : 'api/blog/:id',
-                element : <ApiBlogDetail/>
             },
             {
                 path : '*',

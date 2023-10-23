@@ -22,8 +22,9 @@ export default function AlbumDetail() {
         {loading && (<div>loading...</div>)}
         {album && album.map(a => (
           <div className="my-4" key={a.id}>
-            <div className="text-center">
-                <img src={a.strAlbumThumb} className='w-25' alt="" />
+            <div className="">
+                <img src={a.strAlbumThumb} className='w-25 d-none d-md-block m-auto' alt="" />
+                <img src={a.strAlbumThumb} className='w-75 d-md-none d-block m-auto' alt="" />
             </div>
 
             <div className="text-center mt-3">
@@ -39,8 +40,6 @@ export default function AlbumDetail() {
                   </p>
                 </div>
             </div>
-            
-            {/* <Link to={`album/`+a.idAlbum}>Read More</Link> */}
           </div>
         ))}
     </>

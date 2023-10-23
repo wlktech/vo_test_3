@@ -23,16 +23,16 @@ export default function Album() {
         )}
         <div className="row">
         {albums && albums.map(album => (
-          <div className="col-md-4 mb-3" key={album.id}>
-            <div className="card">
+          <div className="col-md-4 mb-3" key={album.idAlbum}>
+            <div className="card shadow">
             <img src={album.strAlbumThumb} className='card-img-top' alt="" />
-                <div className="card-body my-3">
+                <div className="card-body mt-3">
                     <span className='d-block'>Artist - {album.strArtist}</span>
                     <span className='d-block'>Album - {album.strAlbum}</span>
                     <span className='d-block'>Published - {album.intYearReleased}</span>
                 </div>
                 <div className='text-end'>
-                  <Link className='btn btn-sm btn-outline-secondary m-3' to={`album/`+album.idAlbum}>Read More</Link>
+                  <Link className='btn btn-sm btn-outline-secondary me-3 mb-3' to={`album/`+album.idAlbum}>Read More</Link>
                 </div>
                 
             </div>

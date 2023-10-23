@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
 
-const useApi = (url) => {
+const useFetch3 = (url) => {
   
     let [data, setData] = useState([]);
-    let [page, setPage] = useState([]);
     let [loading, setLoading] = useState(false);
     let [error, setError] = useState(null);
 
@@ -22,8 +21,9 @@ const useApi = (url) => {
             return res.json()
         })
         .then(data => {
-            setData(data.data);
-            setPage(data.links);
+            // setData(data.mvids);
+            console.log(setData(data.mvids));
+            
             setLoading(false)
         })
         .catch(e =>{
@@ -37,7 +37,7 @@ const useApi = (url) => {
 
     }, [url])
 
-    return {data, page, loading, error}
+    return {data, loading, error}
 }
 
-export default useApi
+export default useFetch3
