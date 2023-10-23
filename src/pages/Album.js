@@ -32,7 +32,7 @@ export default function Album() {
                     <span className='d-block'>Published - {album.intYearReleased}</span>
                 </div>
                 <div className='text-end'>
-                  <Link className='btn btn-sm btn-outline-primary m-3' to={`album/`+album.idAlbum}>Read More</Link>
+                  <Link className='btn btn-sm btn-outline-secondary m-3' to={`album/`+album.idAlbum}>Read More</Link>
                 </div>
                 
             </div>
